@@ -10,7 +10,7 @@ sever.use(bodyParser.json())
 server.listen(port, function() {
   console.log(`BACKEND is runnning on port ${port}.`)
 })
-#teste
+
 server.use(function(req, res, next) {
   res.send('Funcionou')
 })
