@@ -7,10 +7,10 @@ const server = express()
 server.use(bodyParser.urlencoded({extended: true}))
 sever.use(bodyParser.json())
 
-server.listen(port, function(){
-  console.log('BACKEND is runnning on port ${port}.')
+server.listen(port, function() {
+  console.log(`BACKEND is runnning on port ${port}.`)
 })
 
-server.use(function(req, res, next){
+server.use(function(req, res, next) {
   res.send('Funcionou')
 })
