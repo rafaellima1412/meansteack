@@ -14,3 +14,6 @@ server.listen(port, function() {
 server.use(function(req, res, next) {
   res.send('Funcionou')
 })
+server.use(function(req, res, next) {
+  res.send('Funcionou')
+})
