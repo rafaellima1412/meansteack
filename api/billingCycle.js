@@ -1,3 +1,5 @@
+/*Mongoose traduz os dados do banco de dados para objetos JavaScript para que possam ser utilizados por sua aplicação.*/
+
 const restful = require('node-restful')
 const mongoose = restful.mongoose
 

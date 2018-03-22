@@ -11,6 +11,10 @@ server.listen(port, function() {
   console.log(`BACKEND is runnning on port ${port}.`)
 })
 
-server.use(function(req, res, next) {
+/*server.use(function(req, res, next) {
   res.send('Funcionou')
-})
+})*/
+
+
+
+module.exports = server
