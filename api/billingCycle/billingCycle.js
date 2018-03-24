@@ -1,4 +1,6 @@
 /*Mongoose traduz os dados do banco de dados para objetos JavaScript para que possam ser utilizados por sua aplicação.*/
+/*integração entre express e mogoose*/
+/*mapeamento e um aexigencia do mogoose que faz a validação antes de enviar para o mongo db*/
 
 const restful = require('node-restful')
 const mongoose = restful.mongoose
@@ -10,9 +12,9 @@ const creditSchema = new mongoose.Schema({
 
 const debtSchema = new mongoose.Schema({
   name: { type: String, required: true},
-  value: {type: Number, min: 0, required: true},
+  value: {type: Number, min: 0, required: [true, 'Informe o valor']},
   status: {type: Number, required: false, uppercase: true,
-  enum: ['PAGO','PENDENTE','AGEANDADO']}
+  enum: ['PAGO','PENDENTE','AGENDADO']}
 })
 
 const billingCycleSchema = new mongoose.Schema({
@@ -23,4 +25,4 @@ const billingCycleSchema = new mongoose.Schema({
   debts: [debtSchema]
 })
 
-moduel.exports = restful.model('BillingCylce', billingCycleSchema)
+module.exports = restful.model('BillingCylce', billingCycleSchema)

@@ -1,5 +1,5 @@
 const express = require('express')
-
+//como eu passo informação para algum modulo dentro do node
 module.exports = function(server) {
 
   //API de routes
@@ -9,6 +9,8 @@ module.exports = function(server) {
 /*  router.route('/teste').get(function(req, res, next) {
     res.send('funcionou')
   })*/
+
+  //rotas da API
   const billingCycleService = require('../api/billingCycle/billingCycleService')
   billingCycleService.register(router, '/billingCycles')
 
