@@ -4,7 +4,7 @@ const BillingCycle = require('./billingCycle')
 BillingCycle.methods(['get', 'post', 'put', 'delete'])
 //sempre que der update traz ultimo registro
 BillingCycle.updateOptions({new: true, runValidators: true})
-
+//retorna json com mensagens de erros padronizadas no database
 BillingCycle.after('post', sendErrorsOrNext).after('put', sendErrorsOrNext)
 function sendErrorsOrNext(req, res, next){
   //bundle trás os erros
