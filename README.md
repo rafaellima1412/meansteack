@@ -1,1 +1,1 @@
-# meansteack aprendendo angular, node, express e mongodb.
+ angular, node, express e mongodb.
